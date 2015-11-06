@@ -709,32 +709,34 @@ Select what format you wish to use and click to 'Export'.</p>"
     title: "Roadmap"
     tab_1: "Future plans"
     tab_2: "Get involved"
-    body_text_tab_1_html: "<p>DMPonline has an active and growing user base, and we are grateful to the members who suggest ideas for new and improved features. We regularly take stock of how we can expand our service to meet these evolving needs.  To keep everyone in the loop, we publish our plans for the future in the DMPonline roadmap.</p>
-    <p>Our <a href='http://www.dcc.ac.uk/webfm_send/1956' target='_blank'>roadmap for 2015</a> is based on a 2-monthly release cycle, and includes a range of new features as well as enhacements to existing features.</p>
-    <p><a href='http://www.dcc.ac.uk/sites/default/files/documents/tools/dmpOnline/DMPonline-roadmap.png' target='_blank'><img alt='' src='http://www.dcc.ac.uk/webfm_send/1957' style='font-size: 14px; width: 600px; height: 266px;'/></a></p>
-    <p>To make sure we’re on the right track, we work to develop our roadmap in conjunction with our DMPonline user group.</p>
+    body_text_tab_1_html: "<p>DMPonline has an active and growing user base, and we are grateful to the members who suggest ideas for new and improved features. We regularly take stock of how we can expand our service to meet these evolving needs.</p>
+    <p>A number of enhancements and new features are planned. These include:</p>
+    <ul>
+        <li>- APIs to create plans, extract guidance and generate statistics from DMPonline</li>
+        <li>- Multi-lingual support so foreign language versions can be presented</li>
+        <li>- Locale-aware support to provide tailored instances for particular countries or other contexts</li>
+        <li>- A lifecycle to indicate the status of DMPs and allow institutional access to plans</li>
+        <li>- Support for reviewing Data Management Plans</li>
+    </ul>
+    <p>We are currently revising the timeframes for our roadmap due to staff changes and pending recruitment. We expect to have a new version online by early 2016.</p>
+    <p>To make sure we’re on the right track, we work to develop our roadmap in conjunction with our DMPonline user group. If you would like to help shape our future plans, please join the group. More information on how you can engage with us is available under the 'Get involved' tab.</p>
     </br>
     <h3>Current release</h3>
-    <p>The current version of DMPonline is 4.1  This was released in May 2015 and included a comment feature, improved guidance on signing in with institutional credentials, enhanced deployment guidance and proposed methods for internationalisation. Full details can be found in the release note and associated documents.</p>
+    <p>The current version of DMPonline is 4.2. This was released in August 2015 and included Institutional branding, optional guidance for funders, improvements to the question area, improvements to the admin interface, GitHub pull requests, new seed file, and an update of the gemfile.</p>
+    <ul>
+      <li>- <a href='/files/DMPonline-ReleaseNote-August2015.pdf' target='_blank'>Release Note</a></li>
+      <li>- <a href='/files/DMPonline-v4-InstitutionalBranding.pdf' target='_blank'>Customise DMPonline tool with institutional branding</a></li>
+    </ul>
+    <p>The code is available on <a target='_blank' href='https://github.com/DigitalCurationCentre/DMPonline_v4'>GitHub</a></p>
+    </br>
+    <h3>Previous release</h3>
+    <p>The previous version of DMPonline is 4.1.  This was released in May 2015 and included a comment feature, improved guidance on signing in with institutional credentials, enhanced deployment guidance and proposed methods for internationalisation. Full details can be found in the release note and associated documents.</p>
     <ul>
       <li>- <a href='/files/DMPonline-DeliveryNote-May2015.pdf' target='_blank'>Release Note</a></li>
       <li>- <a href='/files/DMPonline-v4-InstitutionalLogin.pdf' target='_blank'>Signing into DMPonline version 4 with UK Institutional Credentials</a></li>
       <li>- <a href='/files/DMPonline-v4-LocaleSupport.pdf' target='_blank'>Developing Locale-Aware Support for DMPonline version 4</a></li>
     </ul>
-    <p>The code is available on <a target='_blank' href='https://github.com/DigitalCurationCentre/DMPonline_v4'>GitHub</a></p>
-    </br>
-    <h3>Future plans</h3>
-    <p>A number of new features are planned in forthcoming release. These include:</p>
-    <ul>
-        <li>- Institutional branding</li>
-        <li>- DMP review functionality</li>
-        <li>- Alerts to notify institutions of support needs</li>
-        <li>- Statistics and analytics for administrators</li>
-        <li>- Introduction of a plan lifecycle to define status (e.g. draft, complete, published)</li>
-        <li>- API development</li>
-        <li>- Locale-aware support</li>
-    </ul>
-    <p>If you would like to help shape our future plans you could join the user group. More information on how you can engage with us is available under the 'Get involved' tab.</p>"
+    </br>"
      
     body_text_tab_2_html: "<p>DMPonline is developed and maintained by the UK Digital Curation Centre. We’re a small team, and are happy to collaborate with others. There are various ways you can get involved:</p>
     <h3>Join the user group</h3>
