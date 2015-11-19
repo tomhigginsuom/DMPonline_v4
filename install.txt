@@ -1,0 +1,106 @@
+# DMPOnline - Ubuntu 14.04.03
+
+### Utilities ###
+sudo apt-get install openssh-server
+sudo apt-get install git
+
+# TODO: wkhtmltopdf
+
+# libcurl
+sudo apt-get install libcurl4-openssl-dev
+
+# Install and set root password for mysql
+sudo apt-get install mysql-server
+sudo apt-get install libmysqlclient-dev
+
+### Apache & Phusion Passenger ###
+
+sudo apt-get install apache2
+
+# https://www.phusionpassenger.com/library/install/apache/install/
+
+# Install our PGP key and add HTTPS support for APT
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 561F9B9CAC40B2F7
+sudo apt-get install -y apt-transport-https ca-certificates
+
+# Add our APT repository
+sudo sh -c 'echo deb https://oss-binaries.phusionpassenger.com/apt/passenger trusty main > /etc/apt/sources.list.d/passenger.list'
+sudo apt-get update
+
+# Install Passenger + Apache module
+sudo apt-get install -y libapache2-mod-passenger
+
+# Enable the Passenger Apache module and restart Apache
+sudo a2enmod passenger
+sudo apache2ctl restart
+
+# Check installation
+sudo passenger-config validate-install
+sudo passenger-memory-stats
+
+### Ruby ###
+
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+curl -sSL https://get.rvm.io | bash -s stable --ruby
+
+# rvm setup
+source /home/rdm-tech/.rvm/scripts/rvm
+
+# latest ruby - 2.2.1
+rvm use 2.2.1
+ruby --version
+
+### Gems ###
+
+# mysql ~> 0.3.13
+
+sudo gem install bundler
+
+
+### Mailcatcher (development only) ###
+
+gem install mailcatcher
+
+# Run mailcatcher @ http://ubuntu.local:1080
+mailcatcher --http-ip=ubuntu.local
+
+
+### DMP Online ###
+
+git clone https://github.com/tomhigginsuom/DMPonline_v4.git
+cd DMPonline_v4
+bundle update
+
+# Configure DB users
+mysql -u root -p
+CREATE USER 'mysql'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON *.* TO 'mysql'@'localhost';
+FLUSH PRIVILEGES;
+
+# Create config/database.yml
+# ...
+
+# Modify other config files
+# ...
+
+# Create and populate db tables
+rake db:setup
+rake db:populate
+
+# Run the system (testing)
+rails server
+
+# OR Run the system (passenger)
+bundle exec passenger start
+
+# Admin user:
+# super_admin@example.com password1
+
+# Test user (needs confirmation):
+# test@test.com password
+
+
+
+
+
+
